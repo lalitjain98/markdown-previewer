@@ -89,7 +89,7 @@ class Main extends Component{
 
 		let styles = {
 			mainContainer: {
-				marginTop: "1em",
+				marginBottom: "1em",
 				padding: "1em",
 				minHeight: "80%"
 				// position: "absolute",
@@ -98,8 +98,6 @@ class Main extends Component{
 			sectionHeading: {
 				border: "1px solid #aaa",
 				borderRadius: "5px",
-				margin: "0.5em 0em",
-				padding: "0.25em 0.5em"
 			},
 			editorContainer: {
 				display: "block",
@@ -134,7 +132,7 @@ class Main extends Component{
 
 				<Row className="justify-content-center" style={styles.mainContainer}>
 					<Col xs={12} lg={6}>
-						<h3 className="text-dark" style={styles.sectionHeading}>Editor</h3>
+						<h3 className="text-dark section-heading" style={styles.sectionHeading}>Editor</h3>
 						<div className="editor-container" style={styles.editorContainer}>
 							<textarea
 								className="form-text form-control"
@@ -147,7 +145,7 @@ class Main extends Component{
 					</Col>
 
 					<Col xs={12} lg={6}>
-						<h3 className="text-dark" style={styles.sectionHeading}>Preview</h3>
+						<h3 className="text-dark section-heading" style={styles.sectionHeading}>Preview</h3>
 						{/*<div className="d-flex justify-content-between">*/}
 							{/*<h3 className="p-2 text-dark" style={{border: "1px solid #aaa", borderRadius: "5px"}}>Preview</h3>*/}
 							{/*<button onClick={this.toggleModal}><span className="fa fa-3x fa-expand"></span></button>*/}

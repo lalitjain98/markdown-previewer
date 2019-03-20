@@ -4,9 +4,15 @@
   width: 100%;
 }
 
+.section-heading {
+  margin: 0.5em 0em;
+  padding: 0.25em 0.5em;
+}
+
 @media screen and (min-width: 1000px){
   .main-container {
     height: 100vh;
+    margin-bottom: 1em;
   }
   .preview-container {
     position: absolute;
@@ -15,4 +21,9 @@
   .editor-container {
     height: 100%;
   }
+
+  .section-heading {
+    margin-top: 0;
+  }
+
 }

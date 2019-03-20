@@ -5,7 +5,11 @@ const Header = (props) => {
 	return (
 		<Row
 			className="justify-content-center"
-			style={{ backgroundImage:"linear-gradient(to left,#B2DFDB, #fff)", color: "#004D40", borderBottom:"1px solid #55f"}}>
+			style={{
+				padding: "1em",
+				backgroundColor:"#004D40",
+				color: "#B2DFDB",
+			}}>
 			<Col xs={12}>
 				<h2 className="mx-auto text-center">Markdown Previewer</h2>
 			</Col>
