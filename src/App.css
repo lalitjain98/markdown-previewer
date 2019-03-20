@@ -7,7 +7,12 @@
 @media screen and (min-width: 1000px){
   .main-container {
     height: 100vh;
-    /*position: absolute;*/
-    /*overflow: hidden;*/
+  }
+  .preview-container {
+    position: absolute;
+    overflow: scroll;
+  }
+  .editor-container {
+    height: 100%;
   }
 }

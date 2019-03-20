@@ -91,7 +91,7 @@ class Main extends Component{
 			mainContainer: {
 				marginTop: "1em",
 				padding: "1em",
-				height: "80%"
+				minHeight: "80%"
 				// position: "absolute",
 				// overflow: "scroll"
 			},
@@ -102,27 +102,30 @@ class Main extends Component{
 				padding: "0.25em 0.5em"
 			},
 			editorContainer: {
+				display: "block",
 				border: "1px solid #aaa",
 				borderTop: "0px",
 				borderRadius: "5px",
 				//padding: "0.5em 0em"
-				height: "100%"
+				// height: "100%"
 			},
 			editor: {
-				 height: "100%",
-				 width: "100%"
+				 minHeight: "100%",
+				 // width: "100%"
 			},
 			previewContainer: {
+				display: "block",
 				height: "100%",
-				position: "absolute",
-				overflow: "scroll",
+				width: "100%",
 				border: "1px solid #aaa",
 				borderRadius: "5px",
 				padding: "0.5em",
-				marginRight: "1em"
+				marginRight: "1em",
+				whiteSpace: "no-wrap",
+				overflowX: "scroll",
 			},
 			preview: {
-				padding: "0.5em 0em"
+				padding: "0.5em 0em",
 			}
 		};
 
@@ -132,12 +135,12 @@ class Main extends Component{
 				<Row className="justify-content-center" style={styles.mainContainer}>
 					<Col xs={12} lg={6}>
 						<h3 className="text-dark" style={styles.sectionHeading}>Editor</h3>
-						<div style={styles.editorContainer}>
+						<div className="editor-container" style={styles.editorContainer}>
 							<textarea
 								className="form-text form-control"
 								id="editor"
 								style={styles.editor}
-								// rows={20}
+								rows={10}
 								value={this.state.input}
 								onChange={this.handleChange}></textarea>
 						</div>
@@ -150,7 +153,7 @@ class Main extends Component{
 							{/*<button onClick={this.toggleModal}><span className="fa fa-3x fa-expand"></span></button>*/}
 						{/*</div>*/}
 						<div>
-							<div style={styles.previewContainer} id="preview" dangerouslySetInnerHTML={this.setPreview()}>
+							<div className="preview-container" style={styles.previewContainer} id="preview" dangerouslySetInnerHTML={this.setPreview()}>
 							</div>
 						</div>
 					</Col>
